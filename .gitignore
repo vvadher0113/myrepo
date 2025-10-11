@@ -1,0 +1,6 @@
+# Bicep compiled outputs
+*.json
+!sql-deployment.parameters.json
+
+# Azure deployment logs
+*.log
