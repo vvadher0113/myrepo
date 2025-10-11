@@ -24,6 +24,17 @@ If you need a lower capacity (1 vCore), you can use:
 
 ## Deployment Instructions
 
+### Quick Deploy (Recommended)
+Use the provided deployment script:
+```bash
+./deploy-sql.sh
+```
+This script will:
+- Check for Azure CLI installation
+- Verify Azure login
+- Create the resource group if needed
+- Deploy the SQL database with auto-generated password
+
 ### Using Azure CLI
 ```bash
 az deployment group create \
@@ -43,6 +54,8 @@ New-AzResourceGroupDeployment `
 ## Files Created
 - `sql-deployment.bicep`: Main Bicep template with corrected SKU configuration
 - `sql-deployment.parameters.json`: Parameters file (update with your specific values)
+- `deploy-sql.sh`: Automated deployment script
+- `.gitignore`: Excludes generated ARM template JSON files
 
 ## Notes
 - Update the parameters file with your actual Key Vault details for secure password management
